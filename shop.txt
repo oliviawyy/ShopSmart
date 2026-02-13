@@ -1,0 +1,7 @@
+function exibirResultado(mensagem) {
+//     const area = document.getElementById('resultado-area');
+//     const texto = document.getElementById('resultado-texto');
+    
+//     texto.innerHTML = mensagem;
+
+// }
