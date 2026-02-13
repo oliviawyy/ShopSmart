@@ -9,7 +9,17 @@ function calcularTotal(){
     const v2 = parseFloat(document.getElementById('valor02').value);
 
     if (isNaN(v1) || isNaN(v2)) {
-        alert("preencha os campos com valores numéricos.");
+        resultado.style.display = "flex"
+    
+        
+        resultado.innerHTML =
+        
+        `
+            <ul>
+                <li><span>ERRO</span></li>
+                <li>Voce deve preencher todos os campos!</li>       
+            </ul>
+        `; 
         return null;
     }
     
@@ -21,9 +31,8 @@ function calcularTotal(){
     `
         <ul>
             <li><span>Total da Compra</span></li>
-            <li>Voce esta comprando ${v1} </li>
-            <li>quantidade de produtos: <span>${v2}</span> </li>       
-            <li>O VALOR TOTAL É ${v1 * v2}</li>
+            <li>Voce esta adquirindo ${v2} unidades com valor unitário de ${v1}</li>      
+            <li>Valor total da compra: ${v1 * v2}</li>
         </ul>
     `;   
 }
@@ -33,7 +42,17 @@ function desconto(){
     const v2 = parseFloat(document.getElementById('valor02').value);
 
     if (isNaN(v1) || isNaN(v2)) {
-        alert("preencha os campos com valores numéricos.");
+        resultado.style.display = "flex"
+    
+        
+        resultado.innerHTML =
+        
+        `
+            <ul>
+                <li><span>ERRO</span></li>
+                <li>Voce deve preencher todos os campos!</li>       
+            </ul>
+        `; 
         return null;
     }
     const valorDesconto = (v1 * v2) / 100
@@ -45,10 +64,9 @@ function desconto(){
     
     `
         <ul>
-            <li><span>Total da Compra</span></li>
-            <li>Voce esta comprando ${v1} </li>
-            <li>quantidade de produtos: <span>${v2}</span> </li>       
-            <li>O VALOR TOTAL É ${valorDesconto}</li>
+            <li><span>Desconto Aplicado</span></li>
+            <li>Foi aplicado um desconto de ${v2} sobre o valor de ${v1} </li>       
+            <li>Valor final com desconto: ${valorDesconto}</li>
         </ul>
     `;   
     
@@ -61,11 +79,23 @@ function juros(){
     const v1 = parseFloat(document.getElementById('valor01').value);
     const v2 = parseFloat(document.getElementById('valor02').value);
 
+    const valorJuros = (v1 * v2) / 100
+
     if (isNaN(v1) || isNaN(v2)) {
-        alert("preencha os campos com valores numéricos.");
+        resultado.style.display = "flex"
+    
+        
+            resultado.innerHTML =
+            
+            `
+                <ul>
+                    <li><span>ERRO</span></li>
+                    <li>Voce deve preencher todos os campos!</li>       
+                </ul>
+            `; 
         return null;
     }
-    const valorAcrescimo = (valor01 * valor02) / 100
+    
     
     resultado.style.display = "flex"
 
@@ -75,23 +105,32 @@ function juros(){
     `
         <ul>
             <li><span>Total da Compra</span></li>
-            <li>Voce esta comprando ${v1} </li>
-            <li>quantidade de produtos: <span>${v2}</span> </li>       
-            <li>O VALOR TOTAL É ${v1 + valorAcrescimo}</li>
+            <li>Voce esta adquirindo ${v2} unidade(s) com valor unitário de ${v1}</li>       
+            <li>Valor total da compra: ${v1 + valorJuros}</li>
         </ul>
     `;   
     
-
 }
+
 
 function comissao(){
     const v1 = parseFloat(document.getElementById('valor01').value);
     const v2 = parseFloat(document.getElementById('valor02').value);
     // pegando desconto
-    const valorComissao = (valor01 * valor02) / 100
+    const valorComissao = (v1 * v2) / 100
 
     if (isNaN(v1) || isNaN(v2)) {
-        alert("preencha os campos com valores numéricos.");
+        resultado.style.display = "flex"
+    
+        
+        resultado.innerHTML =
+        
+        `
+            <ul>
+                <li><span>ERRO</span></li>
+                <li>Voce deve preencher todos os campos!</li>       
+            </ul>
+        `; 
         return null;
     }
     else{
@@ -103,17 +142,49 @@ function comissao(){
     
     `
         <ul>
-            <li><span>Total da Compra</span></li>
-            <li>Voce esta comprando ${v1} </li>
-            <li>quantidade de produtos: <span>${v2}</span> </li>       
-            <li>O VALOR TOTAL É ${valorComissao}</li>
+            <li><span>Comissão Calculada</span></li>
+            <li>Comissão de ${v2} sobre uma venda de ${v1} </li>      
+            <li>Valor da comissão: ${valorComissao}</li>
         </ul>
     `; 
  } 
 }
 
 function lucro(){
-
+        const v1 = parseFloat(document.getElementById('valor01').value);
+        const v2 = parseFloat(document.getElementById('valor02').value);
+        // pegando desconto
+        const valorLucro = v1 - v2
+    
+        if (isNaN(v1) || isNaN(v2)) {
+            resultado.style.display = "flex"
+    
+        
+            resultado.innerHTML =
+            
+            `
+                <ul>
+                    <li><span>ERRO</span></li>
+                    <li>Voce deve preencher todos os campos!</li>       
+                </ul>
+            `; 
+            return null;
+        }
+        else{
+        
+        resultado.style.display = "flex"
+    
+        
+        resultado.innerHTML =
+        
+        `
+            <ul>
+                <li><span>Lucro Obtido</span></li>
+                <li>Preço de venda: ${v1} | Custo: ${v2}</li>       
+                <li>Resultado financeiro: ${valorLucro}</li>
+            </ul>
+        `; 
+     } 
 }
 
 
