@@ -151,5 +151,6 @@ function limpar() {
     resultado.style.display = 'none';
     v1.value = ''
     v2.value = ''
+    inputLimpar.focus();
 
 }
