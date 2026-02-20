@@ -66,7 +66,7 @@ function desconto(){
         <ul>
             <li><span>Desconto Aplicado</span></li>
             <li>Foi aplicado um desconto de ${v2} sobre o valor de ${v1} </li>       
-            <li>Valor final com desconto: ${v1 - valorDesconto}</li>
+            <li>Valor final com desconto: ${v1 - valorDesconto}%</li>
         </ul>
     `;   
     
@@ -144,7 +144,7 @@ function comissao(){
         <ul>
             <li><span>Comissão Calculada</span></li>
             <li>Comissão de ${v2} sobre uma venda de ${v1} </li>      
-            <li>Valor da comissão: ${valorComissao}</li>
+            <li>Valor da comissão: ${valorComissao}%</li>
         </ul>
     `; 
  } 
