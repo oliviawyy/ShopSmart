@@ -11,7 +11,7 @@ function calcularTotal() {
     if (isNaN(v1) || isNaN(v2)) {
        erro()
     }
-
+    else{
     resultado.style.display = "flex"
 
 
@@ -25,6 +25,7 @@ function calcularTotal() {
         </ul>
     `;
 }
+}
 
 function desconto() {
     const v1 = parseFloat(document.getElementById('valor01').value);
@@ -33,6 +34,7 @@ function desconto() {
     if (isNaN(v1) || isNaN(v2)) {
         erro()
     }
+    else{
     const valorDesconto = (v1 * v2) / 100
 
     resultado.style.display = "flex"
@@ -48,8 +50,7 @@ function desconto() {
         </ul>
     `;
 
-
-
+}
 
 }
 
@@ -62,7 +63,7 @@ function juros() {
     if (isNaN(v1) || isNaN(v2)) {
         erro()
     }
-
+    else{
     const valorJuros = (v1 * v2) / 100
     resultado.style.display = "flex"
 
@@ -76,7 +77,7 @@ function juros() {
             <li>Valor total da compra: R$${v1 + valorJuros}</li>
         </ul>
     `;
-
+}
 }
 
 
