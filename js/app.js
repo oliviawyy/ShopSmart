@@ -6,8 +6,8 @@ const resultado = document.getElementById("resultado")
 
 
 function calcularTotal() {
-    const v1 = parseFloat(document.getElementById('valor01').value);
-    const v2 = parseFloat(document.getElementById('valor02').value);
+    const v1 = parseFloat(valor01.value);
+    const v2 = parseFloat(valor02.value);
 
     if (isNaN(v1) || isNaN(v2)) {
        erro()
@@ -29,8 +29,8 @@ function calcularTotal() {
 }
 
 function desconto() {
-    const v1 = parseFloat(document.getElementById('valor01').value);
-    const v2 = parseFloat(document.getElementById('valor02').value);
+    const v1 = parseFloat(valor01.value);
+    const v2 = parseFloat(valor02.value);
 
     if (isNaN(v1) || isNaN(v2)) {
         erro()
@@ -56,8 +56,8 @@ function desconto() {
 }
 
 function juros() {
-    const v1 = parseFloat(document.getElementById('valor01').value);
-    const v2 = parseFloat(document.getElementById('valor02').value);
+    const v1 = parseFloat(valor01.value);
+    const v2 = parseFloat(valor02.value);
 
 
 
@@ -83,8 +83,8 @@ function juros() {
 
 
 function comissao() {
-    const v1 = parseFloat(document.getElementById('valor01').value);
-    const v2 = parseFloat(document.getElementById('valor02').value);
+    const v1 = parseFloat(valor01.value);
+    const v2 = parseFloat(valor02.value);
     // pegando desconto
     const valorComissao = (v1 * v2) / 100
 
@@ -109,8 +109,8 @@ function comissao() {
 }
 
 function lucro() {
-    const v1 = parseFloat(document.getElementById('valor01').value);
-    const v2 = parseFloat(document.getElementById('valor02').value);
+    const v1 = parseFloat(valor01.value);
+    const v2 = parseFloat(valor02.value);
     // pegando desconto
     const valorLucro = v1 - v2
 
