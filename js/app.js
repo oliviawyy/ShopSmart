@@ -66,7 +66,7 @@ function desconto(){
         <ul>
             <li><span>Desconto Aplicado</span></li>
             <li>Foi aplicado um desconto de ${v2} sobre o valor de ${v1} </li>       
-            <li>Valor final com desconto: ${valorDesconto}</li>
+            <li>Valor final com desconto: ${v1 - valorDesconto}</li>
         </ul>
     `;   
     
@@ -79,7 +79,7 @@ function juros(){
     const v1 = parseFloat(document.getElementById('valor01').value);
     const v2 = parseFloat(document.getElementById('valor02').value);
 
-    const valorJuros = (v1 * v2) / 100
+   
 
     if (isNaN(v1) || isNaN(v2)) {
         resultado.style.display = "flex"
@@ -96,7 +96,7 @@ function juros(){
         return null;
     }
     
-    
+    const valorJuros = (v1 * v2) / 100
     resultado.style.display = "flex"
 
     
