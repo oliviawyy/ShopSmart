@@ -22,7 +22,7 @@ function calcularTotal() {
         <ul>
             <li><span>Total da Compra</span></li>
             <li>Voce esta adquirindo ${v2} unidades com valor unitário de ${v1}</li>      
-            <li>Valor total da compra: R$${v1 * v2}</li>
+            <li>Valor total da compra: R$${v1 * v2.toFixed(2)}</li>
         </ul>
     `;
 }
@@ -46,8 +46,8 @@ function desconto() {
         `
         <ul>
             <li><span>Desconto Aplicado</span></li>
-            <li>Foi aplicado um desconto de ${v2} sobre o valor de ${v1} </li>       
-            <li>Valor final com desconto: ${v1 - valorDesconto}%</li>
+            <li>Foi aplicado um desconto de ${v2}% sobre o valor de ${v1.toFixed(2)} </li>       
+            <li>Valor final com desconto: ${v1 - valorDesconto.toFixed(2)}%</li>
         </ul>
     `;
 
@@ -74,7 +74,7 @@ function juros() {
         `
         <ul>
             <li><span>Total da Compra</span></li>
-            <li>Voce esta adquirindo ${v2} unidade(s) com valor unitário de ${v1}</li>       
+            <li>Voce esta adquirindo ${v2.toFixed(2)} unidade(s) com valor unitário de ${v1.toFixed(2)}</li>       
             <li>Valor total da compra: R$${v1 + valorJuros}</li>
         </ul>
     `;
@@ -101,8 +101,8 @@ function comissao() {
             `
         <ul>
             <li><span>Comissão Calculada</span></li>
-            <li>Comissão de ${v2} sobre uma venda de ${v1} </li>      
-            <li>Valor da comissão: ${valorComissao}%</li>
+            <li>Comissão de ${v2}% sobre uma venda de ${v1.toFixed(2)} </li>      
+            <li>Valor da comissão: ${valorComissao.toFixed(2)}%</li>
         </ul>
     `;
     }
@@ -127,8 +127,8 @@ function lucro() {
             `
             <ul>
                 <li><span>Lucro Obtido</span></li>
-                <li>Preço de venda: ${v1} | Custo: ${v2}</li>       
-                <li>Resultado financeiro: R$${valorLucro}</li>
+                <li>Preço de venda: ${v1.toFixed(2)} | Custo: ${v2.toFixed(2)}</li>       
+                <li>Resultado financeiro: R$${valorLucro.toFixed(2)}</li>
             </ul>
         `;
     }
