@@ -4,6 +4,7 @@ const v2 = document.getElementById("valor02")
 const resultado = document.getElementById("resultado")
 
 
+
 function calcularTotal() {
     const v1 = parseFloat(document.getElementById('valor01').value);
     const v2 = parseFloat(document.getElementById('valor02').value);
